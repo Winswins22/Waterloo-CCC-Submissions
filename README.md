@@ -1,4 +1,4 @@
-# Waterloo-CCC-AC-Submissions
+# Waterloo-CCC-Submissions
 My AC submissions for questions/problems that are related to the Waterloo CCC.
 
 Most submissions will be Python 3 or C++, but there are a couple Turing and Lua submissions too.
