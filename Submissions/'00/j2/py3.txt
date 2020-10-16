@@ -1,0 +1,47 @@
+low = int(input())
+high = int (input())
+numCorrect = 0
+
+for i in range (low, high + 1):
+    
+    #if odd
+    if i % 2 == 1:
+        
+        iTemp = str(i)
+        #start out to in
+        for x in range (len(iTemp)):
+            #check if the two are equal to 0,1,8, or pair 6/9
+            begin = int (iTemp[x])
+            end = int (iTemp [len(iTemp)-x-1] )
+            
+            if (begin == end == 0 or begin == end == 1 or begin == end == 8) or (begin == 9 and end == 6 or begin == 6 and end == 9):
+                
+                #if both letter is same terminate
+                if (len(iTemp)-x-1 == x) or (len(iTemp)-x-1 == x+1):
+                    numCorrect += 1
+                    break
+            
+            else:
+                break
+            
+    #if even
+    if i % 2 == 0:
+        
+        iTemp = str(i)
+        #start out to in
+        for y in range (len(iTemp)):
+            #check if the two are equal to 0,1,8, or pair 6/9
+            begin = int (iTemp[y])
+            end = int (iTemp [len(iTemp)-y-1] )
+            
+            if (begin == end == 0 or begin == end == 1 or begin == end == 8) or (begin == 9 and end == 6 or begin == 6 and end == 9):
+                
+                #if both letter is same terminate
+                if (len(iTemp)-y-1 == y + 1) or (len(iTemp)-y-1 == y):
+                    numCorrect += 1
+                    break
+            
+            else:
+                break
+            
+print (numCorrect)

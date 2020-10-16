@@ -1,0 +1,13 @@
+var A : int
+var B : int
+var C : int
+get A
+get B
+get C
+if A < B and B < C or C < B and B < A then
+    put B
+elsif B < C and C < A or A < C and C < B then
+    put C
+elsif C < A  and A < B or B < A and A < C then
+    put A
+end if

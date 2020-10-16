@@ -1,0 +1,127 @@
+clubs = []
+diamonds = []
+hearts = []
+spades = []
+print ("Cards Dealt              Points")
+cards = input()
+cType = "C"
+
+for i in cards:
+    if i == "C":
+        cType = "C"
+    elif i == "D":
+        cType = "D"
+    elif i == "H":
+        cType = "H"
+    elif i == "S":
+        cType = "S"
+    else:
+        if cType == "C":
+            clubs.append(i)
+        elif cType == "D":
+            diamonds.append(i)
+        elif cType == "H":
+            hearts.append(i)
+        elif cType == "S":
+            spades.append(i)
+totalPts = 0
+
+
+pts = 0
+
+print ("Clubs ", end= "")
+for i in clubs:
+    print (i, " ", sep= "", end= "")
+    if i == "A":
+        pts += 4
+    elif i == "K":
+        pts += 3
+    elif i == "Q":
+        pts += 2
+    elif i == "J":
+        pts += 1
+
+nCards = len(clubs)
+
+if nCards == 0:
+    pts += 3
+elif nCards == 1:
+    pts += 2
+elif nCards == 2:
+    pts += 1
+print (pts)
+totalPts += pts
+pts = 0
+
+print ("Diamonds ", end= "")
+for i in diamonds:
+    print (i, " ", sep= "", end= "")
+    if i == "A":
+        pts += 4
+    elif i == "K":
+        pts += 3
+    elif i == "Q":
+        pts += 2
+    elif i == "J":
+        pts += 1
+
+nCards = len(diamonds)
+
+if nCards == 0:
+    pts += 3
+elif nCards == 1:
+    pts += 2
+elif nCards == 2:
+    pts += 1
+print (pts)
+totalPts += pts
+pts = 0
+
+print ("Hearts ", end= "")
+for i in hearts:
+    print (i, " ", sep= "", end= "")
+    if i == "A":
+        pts += 4
+    elif i == "K":
+        pts += 3
+    elif i == "Q":
+        pts += 2
+    elif i == "J":
+        pts += 1
+
+nCards = len(hearts)
+
+if nCards == 0:
+    pts += 3
+elif nCards == 1:
+    pts += 2
+elif nCards == 2:
+    pts += 1
+print (pts)
+totalPts += pts
+pts = 0
+
+print ("Spades ", end= "")
+for i in spades:
+    print (i, " ", sep= "", end= "")
+    if i == "A":
+        pts += 4
+    elif i == "K":
+        pts += 3
+    elif i == "Q":
+        pts += 2
+    elif i == "J":
+        pts += 1
+
+nCards = len(spades)
+
+if nCards == 0:
+    pts += 3
+elif nCards == 1:
+    pts += 2
+elif nCards == 2:
+    pts += 1
+print (pts)
+totalPts += pts
+pts = 0
+print (" Total", totalPts)

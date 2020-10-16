@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    
+    int ogNumer, ogDenom;
+    int whole, numer, denom;
+    int temp;
+    
+    cin >> ogNumer >> ogDenom;
+    
+    numer = ogNumer % ogDenom;
+    denom = ogDenom;
+    
+    whole = (ogNumer - numer) / ogDenom;
+    
+    for (int i = ogDenom; i != 0; i--){
+        
+        if (numer % i == 0 && denom % i == 0){
+            numer /= i;
+            denom /= i;
+        }
+        
+    }
+    
+    if (whole != 0){
+        cout << whole << " ";
+    }
+    
+    if (numer != 0){
+        cout << numer << "/" << denom;
+    }
+    
+    
+}
