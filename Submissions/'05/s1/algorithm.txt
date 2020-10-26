@@ -1,0 +1,5 @@
+Repeatedly read data from the input until you get 10 letters/numbers to get a phone number with.
+
+After that, convert letters into numbers by using a function, map, or a menthod of your choice.
+
+Output the answer with hyphens and keep reading phone numbers.

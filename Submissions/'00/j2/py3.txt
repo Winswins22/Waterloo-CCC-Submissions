@@ -1,47 +1,46 @@
+from math import ceil
+
 low = int(input())
-high = int (input())
-numCorrect = 0
+high = int(input())
+
+def same (num1, num2):
+    
+    if (num1 == 1) and (num2 == 1):
+        return True
+    
+    if (num1 == 0) and (num2 == 0):
+        return True
+    
+    if (num1 == 8) and (num2 == 8):
+        return True
+    
+    if (num1 == 6) and (num2 == 9):
+        return True
+    
+    if (num1 == 9) and (num2 == 6):
+        return True
+    
+    return False
+
+
+def sameAfterReverse(num):
+    
+    strNum = str(num)
+    
+    # check from 0 ... halfway while getting the opposite side to make sure num is the same
+    for i in range (ceil(len(strNum) / 2)):
+        if not same (int(strNum[i]), int(strNum[len(strNum) - i - 1])):
+            return False
+    
+    return True
+        
+        
+
+
+numLookSame = 0
 
 for i in range (low, high + 1):
-    
-    #if odd
-    if i % 2 == 1:
+    if sameAfterReverse(i):
+        numLookSame += 1
         
-        iTemp = str(i)
-        #start out to in
-        for x in range (len(iTemp)):
-            #check if the two are equal to 0,1,8, or pair 6/9
-            begin = int (iTemp[x])
-            end = int (iTemp [len(iTemp)-x-1] )
-            
-            if (begin == end == 0 or begin == end == 1 or begin == end == 8) or (begin == 9 and end == 6 or begin == 6 and end == 9):
-                
-                #if both letter is same terminate
-                if (len(iTemp)-x-1 == x) or (len(iTemp)-x-1 == x+1):
-                    numCorrect += 1
-                    break
-            
-            else:
-                break
-            
-    #if even
-    if i % 2 == 0:
-        
-        iTemp = str(i)
-        #start out to in
-        for y in range (len(iTemp)):
-            #check if the two are equal to 0,1,8, or pair 6/9
-            begin = int (iTemp[y])
-            end = int (iTemp [len(iTemp)-y-1] )
-            
-            if (begin == end == 0 or begin == end == 1 or begin == end == 8) or (begin == 9 and end == 6 or begin == 6 and end == 9):
-                
-                #if both letter is same terminate
-                if (len(iTemp)-y-1 == y + 1) or (len(iTemp)-y-1 == y):
-                    numCorrect += 1
-                    break
-            
-            else:
-                break
-            
-print (numCorrect)
+print (numLookSame)

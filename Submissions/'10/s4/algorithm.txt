@@ -1,0 +1,14 @@
+For this question, I used Prim's because it is the most straightforward MST algorithm.
+Prims: https://youtu.be/09_LlHjoEiY?t=15780
+
+One noteable challenge is converting the input into a standard adjacency list, for use in Prim's.
+
+To do this, you can assign each shape a number, and take note of the edges. If the edges appear in
+multiple shapes, they are connected by the given cost. If the edge only appears only once, it is
+connected to the outside. This allows you to create a standard adjecency list.
+
+Although, with Prim's, it explores the most optimal edges first and assumes the graph is connected.
+This leads to it travelling everywhere, including the outside. There may be times where it may not
+be necessasry to travel to the outside, creating a wrong answer. To get around this, you can run
+Prim's twice, one time where you can't go outside and one time where you can, and take the best
+valid result of the two.

@@ -1,0 +1,5 @@
+Use a while loop to repeatedly get input and use if statements to check for:
+	- exit signal (0)
+	- ladder or snake squares
+	- win square (100)
+	- score past 100. In this case, don't move from the current square.

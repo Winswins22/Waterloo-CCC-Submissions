@@ -1,0 +1,14 @@
+For this question, you'll need to output the edges of the graph, and then check if two websites 
+are connected.
+
+To get the edges, you'll need to look for <A HREF="https://dmoj.ca/problem/ccc00s3">. That means 
+that there is an edge between the current website and the linked website. Store this in a variable
+so that you can use it to check if two websites are connected later. 
+
+Common ways to store a graph would be using an adjacency list, edge list, or adjacency matrix.
+
+After that, you'll need to implement a Depth FIrst Search or Breadth First Search to check if 
+websites are connected. 
+
+You can find a basic introduction here for Depth FIrst Search and Breadth First Search: 
+https://www.youtube.com/watch?v=09_LlHjoEiY

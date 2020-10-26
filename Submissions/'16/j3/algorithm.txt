@@ -1,0 +1,2 @@
+You can start from any given letter or any 2 same adjecent letters. After that, move out one letter
+at a time until you reach the end of the word or you hit two dirrent letters.

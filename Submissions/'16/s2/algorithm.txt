@@ -1,0 +1,9 @@
+You can read input by using a list/vector.
+
+To solve question 1, you'll want to pair the fastest speed person from one side and slowest speeds 
+from the other side. This makes it so that the faster person can carry the other slower person.
+This can be achieved by sorting both lists and using for loop(s) to get the speeds in the list.
+
+To solve question 2, you'll want to pair the people with the closest speeds together. This makes
+it so that the speed benefit is as low as possible. This can be achieved by sorting both lists 
+and using a for loop to loop through both lists at the same time.

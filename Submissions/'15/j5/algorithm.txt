@@ -1,0 +1,7 @@
+Memoization: https://www.geeksforgeeks.org/memoization-1d-2d-and-3d/
+
+To find the amount of ways to distribute the pies, use a recursive function that returns the sum of
+its calls and returns 1 when there are 0 people and pies left.
+
+To speed this up, add a map/dict to save the results before returning it. If the recursive function
+notices the answer has already been calculated, return the value.

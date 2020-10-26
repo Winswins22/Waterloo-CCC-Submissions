@@ -1,0 +1,3 @@
+To calculate the weight, you'll need to use division and multiplication.
+
+AFter, you'll need to use if statements to output the correct asnwer.

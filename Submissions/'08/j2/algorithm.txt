@@ -1,0 +1,3 @@
+To store the songs, use a variable that can store multiple variables in one (i.e. array, vector, list)
+
+After that, use a while loop to check for input and if statements to act on the input.

@@ -1,3 +1,5 @@
+#this code gives more pies first instead of giving less pies first.
+
 from math import ceil
 
 totalPies = int(input())
@@ -9,7 +11,7 @@ numPaths = {}
 
 #maxGive : Maximum amount of pies to be given. Can only decrease.
 #peopleLeft : how many people still need pies
-#piesLeft : um yea xyz
+#piesLeft : how many pies is still left
 
 def DFS (maxPiece, peopleLeft, piesLeft):
     

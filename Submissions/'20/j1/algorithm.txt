@@ -1,0 +1,2 @@
+Use a variable to store all the inputs. Declare another valriable to use to calculate the happiness
+score. After that, use an if statement to output "happy" or "sad".

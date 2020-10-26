@@ -1,0 +1,7 @@
+Fairly straightforward question with a while loop and min() + max() or if statements.
+
+The first input is the maximum x and y coordinates, with the rest being mouse movements.
+The mouse starts at (0, 0) and input terminates when the input is (0, 0).
+
+You can prevent the mouse from moving outside the allowed coordinates by using the min() and max()
+functions or you can use some if statements.

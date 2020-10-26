@@ -1,0 +1,3 @@
+For this question, you'll have to get creative with for loops.
+
+I used 1 for loop to output the top half + middle, and another to output the bottom half.

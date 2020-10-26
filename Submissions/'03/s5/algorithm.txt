@@ -1,0 +1,13 @@
+For this question you can use Dijstrika's to solve it.
+
+You can find an introduction for Dijstrika's here: 
+https://youtu.be/09_LlHjoEiY?t=4774
+
+To start things off, notice that we can drive to the cities in any order. This is because if you
+always use the most optimal paths to travel on, the maximum weight will be the same no matter
+which order you travel in.
+
+So, as long as you use Dijstrika's to pick the best path, you can always get the highest weight,
+even if it means visiting nodes and edges more than once.
+
+I've also noticed you can use Prim's as well to solve this problem.

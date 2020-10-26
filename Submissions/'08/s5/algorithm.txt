@@ -1,0 +1,10 @@
+Memoization: https://www.geeksforgeeks.org/memoization-1d-2d-and-3d/
+
+An interesting DP with multiple values to mess with.
+
+To use memoization, you can start off by simulating what would happen at each turn with each
+combination of particles and storing the results in a map/dict. The unique part is that Patrick 
+and Roland will always choose the best choice for them. 
+
+For example, if it is Patrick's turn, and he has 5 choices: Lose, Lose, Lose, Win, and Lose; he
+will pick Win because Patrick will always choose the most optimal option.s

@@ -1,0 +1,14 @@
+A graph theory question with tons of optimization.
+
+You can find an introduction for Depth First Search here: 
+https://www.youtube.com/watch?v=09_LlHjoEiY
+
+For the first 3 marks, you can use brute force and a list/vector to calculate the result.
+
+For the rest, you'll have to squeeze every bit of execution time out of your program, so here are
+some general tips:
+	- sets are faster than lists/vectors if you don't need indices
+	- store your answer in a variable if you need to access it later. It is better than
+	  recomputing your answer
+	- you can mark a number as visited instead of a (row, col) pair to save space and time from
+	  looping through the visited set

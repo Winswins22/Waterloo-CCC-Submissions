@@ -1,0 +1,8 @@
+For this question, you can use multiple lists or a nested list to store the keyboard.
+
+To calculate the amount of moves needed, find the row and column of each of the letters.
+Find the absolute value of row1-row2 and col1 - col2 and add those 2 values together.
+The differences in the rows simulates the person pressing the up/down key, and the differences
+of the cols simulates the person pressing left/right.
+
+Keep in mind that you start at "A" and end at "enter", and you can't wrap around the grid.

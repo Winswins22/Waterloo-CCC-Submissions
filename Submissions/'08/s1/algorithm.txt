@@ -1,0 +1,4 @@
+For this question, you can put all input into an array/vector/list and sort it to find the minimum
+temp.
+
+ALternatively, you can keep track of the lowest temperature and city using 2 variables.

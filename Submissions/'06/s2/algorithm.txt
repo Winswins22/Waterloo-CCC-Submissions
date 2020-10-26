@@ -1,0 +1,20 @@
+In this problem, the first line is an unencrypted message, the second line is what the letters in 
+the unecrypted message stand for, and in the third line is a completely seperate message that you
+have to decrypt.
+
+So if the input was:
+HELLO
+WERRT
+RTR
+
+Encrypted -> Decrypted
+W : H
+E : E
+R : L
+T : O
+
+If we pass RTR though this, we get L-O-L.
+
+To simulate this, using a map/dict is recommended. You can use the encrypted letters as the key
+and the unencrypted letter as the value. If you can't retrieve the value from the key, mark it with
+a ".".

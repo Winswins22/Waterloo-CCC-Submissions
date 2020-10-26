@@ -1,0 +1,2 @@
+Use a for loop to repeatedly get input and some if statements to figure out who loses the roll.
+Ties result in neither player losing points.

@@ -1,0 +1,7 @@
+For this question, you can use a for loop inside of multiple for loops - this is known as a "nested"
+loop. You can use the nested loop to brute force the amount of tickets.
+
+Set the upper bounds of the for loops to a high enough limit to test all possiblities and
+keep track of how many you find. After that, you can output them when you find them.
+
+Finally, output the total amount of tickets.

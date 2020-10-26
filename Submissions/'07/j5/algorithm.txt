@@ -1,0 +1,68 @@
+Put the initial motel locations into a list, add the extra locations into the list, and sort it.
+
+After that, create a recursive function to simulate what would happen if you picked to go to each
+reachable motels at this point. This function will return the amount of ways (added together after 
+testing possiblilites) and return 1 way when they reach the end (7000km).
+
+To speed this up, save the amount of ways at the current motel you are at in a dict/map when you
+are fnished calculating.
+
+This technique is called memoization.
+Explanation: https://www.geeksforgeeks.org/memoization-1d-2d-and-3d/
+
+To give a simplified explanation, let's say that the only motel locations are 0, 3000, 4000, and
+7000. The truck can travel 1000-4000km at a time.
+
+At motel: 0
+Motels: [0, 3000, 4000, 7000]
+Ways: [?, ?, ?, 1]
+
+Call the recursive function with the motel at 3000 and 4000.
+
+At motel: 3000
+Motels: [0, 3000, 4000, 7000]
+Ways: [?, ?, ?, 1]
+
+Call the recursive function with the motel at 4000 and 7000.
+
+At motel: 4000
+Motels: [0, 3000, 4000, 7000]
+Ways: [?, ?, ?, 1]
+
+Call the recursive function with the motel at 7000.
+
+At motel: 7000
+Motels: [0, 3000, 4000, 7000]
+Ways: [?, ?, ?, 1]
+Return 1 way
+
+Return the amount of ways: 1
+
+At motel: 4000
+Motels: [0, 3000, 4000, 7000]
+Ways: [?, ?, 1, 1]
+Return + Save 1 way
+
+Return the amount of ways after adding up: 1
+
+At motel: 3000
+Motels: [0, 3000, 4000, 7000]
+Ways: [?, 2, 1, 1]
+Return + Save 2 ways
+
+Since you can travel to both the 4000km and 7000km motel, add the amount of ways at both 
+motels to get 2.
+
+At motel: 0
+Motels: [0, 3000, 4000, 7000]
+Ways: [3, 2, 1, 1]
+
+Since you can travel to both the 3000m and 4000km motel, add the amount of ways at both 
+motels to get 3.
+
+
+
+Just a quick note - you can't go backwards in your truck. For example, you cannot go to a 3000km
+motel if you are at the 4000km motel.
+
+

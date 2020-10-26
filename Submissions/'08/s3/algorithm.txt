@@ -1,0 +1,7 @@
+For this question, you'll need to use a Breadth First Search through a graph to get the shortest path.
+
+You can find an introduction for Breadth First Search here: 
+https://www.youtube.com/watch?v=09_LlHjoEiY
+
+While processing input to create a graph, make sure you don't add a path that goes into an asterisk.
+(i.e. don't add path for: -*)

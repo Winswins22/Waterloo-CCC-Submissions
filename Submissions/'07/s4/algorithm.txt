@@ -1,0 +1,34 @@
+An interesting question with a mix of Dyanmic Programming and Graph Theory!
+
+Graph Theory: 
+https://www.youtube.com/watch?v=09_LlHjoEiY
+
+Memoization (DP): 
+Explanation: https://www.geeksforgeeks.org/memoization-1d-2d-and-3d/
+
+Something to take note of is that since you can't go from a high number to a lower one 
+(i.e. 3 to 1 is invalid) there are no cycles inside the graph. You can also ignore the hint about
+starting from the bottom of the slide, since it doesn't apply to this algorithm :)
+
+To get the amount of ways to the end of the slide traverse over the graph in a recursive manner (like DFS) 
+to get the amount of ways to the end. The amount of ways to get to the end is the sum of the ways 
+of all the other nodes to the end.
+
+So if you can go from
+1 -> 2
+1 -> 3
+2 -> 3
+3 -> 4
+
+The amount of ways is the amount of ways from 1 to the end is: (1 -> 2) + (1 -> 3) + (1 -> 4).
+(1 -> 2) = ways (2 -> 3)
+(1 -> 3) = ways (3 -> 4)
+(1 -> 4) = 1
+
+We can calculate the rest of the of the nodes by using the same recursive function on those nodes.
+
+To speed it up you'll need to keep track of a dict/map, where it tracks the amount of ways you can
+use to get there. The key represents the node, and the value represents the amount of ways to the 
+end. Mark the final node with "1" to indicate 1 way and every other node with an invalid value for 
+now. Update the dict/map when you calculate a better value. Retrieve values from this dict/map when
+you notice that you have already calculated the answer for this node. (memoization)

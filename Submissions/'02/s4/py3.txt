@@ -1,5 +1,3 @@
-#Spaghetti
-
 inf = float ("inf")
 
 #Input
@@ -22,6 +20,7 @@ goodTimes = {}
 paths = {}
 
 #DFS Creation
+#Not actually DFS, but they are similar because they both use recursion
 def DFS (pos, currTime):
     
     #check if pos in time

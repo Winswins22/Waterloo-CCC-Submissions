@@ -1,0 +1,10 @@
+You can find an introduction for Dijstrika's here: 
+https://youtu.be/09_LlHjoEiY?t=4774
+
+This question is different from other Dijstrika's questions, since you need to find a balance
+between a fast path and a path that keeps you alive.
+
+Using a prioirity queue that prioritizes time, then health except in the case of the end node along
+with a map that stores good paths that can be updated if either health or time is better ensures
+that speed is prioritized, then health is taken into consideration when the end can't be reached
+due to low health.

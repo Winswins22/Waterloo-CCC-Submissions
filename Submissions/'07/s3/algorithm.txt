@@ -1,0 +1,5 @@
+You can find an introduction for Breadth First Search here: 
+https://www.youtube.com/watch?v=09_LlHjoEiY
+
+For this question, you'll want to perform a Breadth First Search over a directed graph to find
+the shortest path from one student to another.

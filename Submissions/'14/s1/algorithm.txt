@@ -1,0 +1,3 @@
+Create a list/vector and use a for loop to count up by a given number.
+For example, if the input was two, count up by two at a time and pop those indexes.
+Keep in mind after popping an index, the entire list/vector will shift.

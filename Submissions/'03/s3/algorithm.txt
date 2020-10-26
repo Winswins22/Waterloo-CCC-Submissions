@@ -1,0 +1,11 @@
+For this question, you'll want to get all the room sizes, and use the flooring to build the biggest
+rooms first. 
+
+To get the room sizes, you'll want to use a Breadth First Search or a Depth First Search to connect
+the empty spaces together, and get the size.
+
+You can find an introduction for Depth FIrst Search and Breadth First Search here: 
+https://www.youtube.com/watch?v=09_LlHjoEiY
+
+After that, sort the room sizes so that the biggest rooms come first. Then, keep building the rooms
+until you run out of flooring.

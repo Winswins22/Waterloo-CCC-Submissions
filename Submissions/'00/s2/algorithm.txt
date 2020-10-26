@@ -1,0 +1,20 @@
+For this question, you'll need to keep track of a stream and some variables for split and joins.
+
+Some things to keep in mind:
+
+You'll need store your numbers as decimals and round them as you output. I think the last case
+requires you to do this, while the other 4 cases only use integers.
+
+
+When the question says "left" and "right", "left" means moving to the left in the stream list
+and "right" means moving to the right in the list.
+
+For exmaple:
+
+[10, 20, 30]
+with a split at position 2 for 20% would output:
+
+[10, 4, 16, 30]
+
+
+   

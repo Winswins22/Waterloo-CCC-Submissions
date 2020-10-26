@@ -1,0 +1,8 @@
+For this question, you'll want to know the basics of graphs, as it'll make this question easier.
+Explanation: https://www.youtube.com/watch?v=09_LlHjoEiY
+
+You'll want to contruct 2 directed graphs, one where edges point towards taller people and another
+where edges point towards shorter people.
+
+Traverse from one person to another through the taller graph. If it can be reached, they are taller.
+Do the same with the shorter graph. If neither graph can be used to connect the two, it is unknown.

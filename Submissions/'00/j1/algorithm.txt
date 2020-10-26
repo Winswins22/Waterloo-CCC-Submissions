@@ -1,0 +1,17 @@
+You can do this question without a nested list, but it's more clear so I used it in my code.
+
+The idea of a nested list is to use a list to store lists. 
+You can use the first index to store each row, and the second index to get the 
+number inside the row.
+
+To initialize the nested list, you'll need to add as many spaces as the input says and then use a 
+counter variable to store the day, making sure you stop adding to the list after it hits 7 days.
+
+In the sample output, a way to store the calendar would be:
+[
+[(None), (None), 1, 2, 3, 4, 5],
+[6, 7, 8, 9, 10, 11, 12],
+[13, 14, 15, 16, 17, 18, 19],
+[20, 21, 22, 23, 24, 25, 26],
+[27, 28, 29, 30]
+]

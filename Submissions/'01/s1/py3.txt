@@ -1,7 +1,36 @@
-clubs = []
-diamonds = []
-hearts = []
-spades = []
+# index 0 == clubs
+# index 1 == diamonds
+# index 2 == hearts
+# index 3 == spades
+allCards = [
+[],
+[],
+[],
+[]
+]
+
+def getPoints (cardList):
+    points = 0
+    
+    if len(cardList) == 0:
+        points = 3
+    elif len(cardList) == 1:
+        points = 2
+    elif len(cardList) == 2:
+        points = 1
+    
+    for i in cardList:
+        if i == "A":
+            points += 4
+        elif i == "K":
+            points += 3
+        elif i == "Q":
+            points += 2
+        elif i == "J":
+            points += 1
+    
+    return points
+
 print ("Cards Dealt              Points")
 cards = input()
 cType = "C"
@@ -17,111 +46,31 @@ for i in cards:
         cType = "S"
     else:
         if cType == "C":
-            clubs.append(i)
+            allCards[0].append(i)
         elif cType == "D":
-            diamonds.append(i)
+            allCards[1].append(i)
         elif cType == "H":
-            hearts.append(i)
+            allCards[2].append(i)
         elif cType == "S":
-            spades.append(i)
+            allCards[3].append(i)
 totalPts = 0
 
+for i in range (4):
+    pts = getPoints(allCards[i])
+    totalPts += pts
+    
+    if i == 0:
+        print ("Clubs ", end= "")
+    elif i == 1:
+        print ("Diamonds ", end= "")
+    elif i == 2:
+        print ("Hearts ", end= "")
+    elif i == 3:
+        print ("Spades ", end= "")
+    
+    for j in allCards[i]:
+        print (j, " ", end = "")
+    print (pts)
 
-pts = 0
 
-print ("Clubs ", end= "")
-for i in clubs:
-    print (i, " ", sep= "", end= "")
-    if i == "A":
-        pts += 4
-    elif i == "K":
-        pts += 3
-    elif i == "Q":
-        pts += 2
-    elif i == "J":
-        pts += 1
-
-nCards = len(clubs)
-
-if nCards == 0:
-    pts += 3
-elif nCards == 1:
-    pts += 2
-elif nCards == 2:
-    pts += 1
-print (pts)
-totalPts += pts
-pts = 0
-
-print ("Diamonds ", end= "")
-for i in diamonds:
-    print (i, " ", sep= "", end= "")
-    if i == "A":
-        pts += 4
-    elif i == "K":
-        pts += 3
-    elif i == "Q":
-        pts += 2
-    elif i == "J":
-        pts += 1
-
-nCards = len(diamonds)
-
-if nCards == 0:
-    pts += 3
-elif nCards == 1:
-    pts += 2
-elif nCards == 2:
-    pts += 1
-print (pts)
-totalPts += pts
-pts = 0
-
-print ("Hearts ", end= "")
-for i in hearts:
-    print (i, " ", sep= "", end= "")
-    if i == "A":
-        pts += 4
-    elif i == "K":
-        pts += 3
-    elif i == "Q":
-        pts += 2
-    elif i == "J":
-        pts += 1
-
-nCards = len(hearts)
-
-if nCards == 0:
-    pts += 3
-elif nCards == 1:
-    pts += 2
-elif nCards == 2:
-    pts += 1
-print (pts)
-totalPts += pts
-pts = 0
-
-print ("Spades ", end= "")
-for i in spades:
-    print (i, " ", sep= "", end= "")
-    if i == "A":
-        pts += 4
-    elif i == "K":
-        pts += 3
-    elif i == "Q":
-        pts += 2
-    elif i == "J":
-        pts += 1
-
-nCards = len(spades)
-
-if nCards == 0:
-    pts += 3
-elif nCards == 1:
-    pts += 2
-elif nCards == 2:
-    pts += 1
-print (pts)
-totalPts += pts
-pts = 0
-print (" Total", totalPts)
+print ("Total", totalPts)

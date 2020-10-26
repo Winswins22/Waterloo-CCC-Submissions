@@ -1,5 +1,5 @@
 %to determine if an input is a palidrome, start from a letter of the word, and check outwards from there
-%we need to check both ways (starting from a letter, and starting with 2 equal adjacent letters)
+%we need to check 2 different types of palindromes (starting from a letter, and starting with 2 equal adjacent letters)
 
 var input : string
 var checkingLetterSame : int := 1

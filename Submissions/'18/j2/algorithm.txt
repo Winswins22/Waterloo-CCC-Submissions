@@ -1,0 +1,2 @@
+Read in the inputs as a string, and use a variable to track how many spaces were occupies on both
+days. Loop through both strings and if you see a "C" at the same index, increase the total by 1.

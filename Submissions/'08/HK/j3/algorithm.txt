@@ -1,0 +1,2 @@
+For this question, you can use maps/dicts to store the names + phone numbers, and another to store
+the amount of times a phone number appears.  

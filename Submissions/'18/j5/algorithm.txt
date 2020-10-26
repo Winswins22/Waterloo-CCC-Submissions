@@ -1,0 +1,8 @@
+You can find an introduction for Dijstrika's here: 
+https://youtu.be/09_LlHjoEiY?t=4774
+
+A simple way to avoid having to detect cycle is to use a complicated algorithm compared to a Breadth
+First Search (Dijstrika's). The constraints are low enough to not TLE. 
+
+Python 3 worst test case: 0.052s
+C++ worst test case: 0.008s

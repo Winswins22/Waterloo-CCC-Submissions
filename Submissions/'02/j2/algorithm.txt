@@ -1,0 +1,5 @@
+To read input, you'll need to use a data type known as a "string" - a line of text/symbols.
+
+After that, you can check the length of the string  is longer that 4 and the last 3 letters
+to make sure that it has a consonant followed by "or" ("y" is not a consonant). If it is,
+replace the "or" with "our".

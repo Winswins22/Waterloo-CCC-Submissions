@@ -1,0 +1,3 @@
+Fairly straightforward math and if statements.
+
+Check to make sure your output sentences are the same as the ones in the same outputs :)

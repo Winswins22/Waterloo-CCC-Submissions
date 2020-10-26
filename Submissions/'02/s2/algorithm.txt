@@ -1,0 +1,10 @@
+After reading the numbers, you can divide the numerator by the denominator and then round that
+number down to get the whole number.
+
+To get the numerator after the division, use the equation:
+numerator - (whole * denominator)
+
+After that, you can simplify the numerator and denominator by checking for common factors. Using
+a for loop to check for all combinations up to half the bigger number should be enough.
+
+Remember to not output the whole if it is 0.

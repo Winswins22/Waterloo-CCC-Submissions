@@ -1,0 +1,4 @@
+For this question, to calculate the amount of ways for any given square is to get the sum of the upper
+and left tiles (cat squares are 0). Repeat this process until you get to the end.
+
+There is a picture to explain this further.

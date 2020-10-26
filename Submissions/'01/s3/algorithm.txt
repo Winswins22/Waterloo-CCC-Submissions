@@ -1,0 +1,11 @@
+For this question, you can use a variable to store the graph, and a list to store all the edges
+in the graph.
+
+Common ways to store a graph would be using an adjacency list, edge list, or adjacency matrix.
+
+After that, you can loop through all the edges, select an edge to be bombed, and use a 
+Depth First Search or a Breadth First Search to check if you can move from A to B without using
+that edge.
+
+You can find a basic introduction here for Depth FIrst Search and Breadth First Search: 
+https://www.youtube.com/watch?v=09_LlHjoEiY

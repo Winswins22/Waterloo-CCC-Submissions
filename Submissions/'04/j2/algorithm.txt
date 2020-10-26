@@ -1,0 +1,5 @@
+First, we need to figure out how often all positions are re-elected.
+
+This can be figured out by finding the LCM of 2, 3, 4, and 5. The LCM would be 60.
+
+Then, we use a for loop that counts up by 60 to find the years in between the 2 given years.

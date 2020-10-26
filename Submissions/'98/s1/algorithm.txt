@@ -1,0 +1,2 @@
+Split the input at each space and search for 4 letter long words. If one is found, replace it with
+"****".

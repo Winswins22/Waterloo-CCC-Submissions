@@ -1,0 +1,2 @@
+While reading in input, count all "t", "T", "s", and "S". At the end, compare the amount of all 'T's
+and 'S's to see if it is English or French.

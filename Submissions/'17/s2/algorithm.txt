@@ -1,0 +1,2 @@
+Start from the center of the list, and alternate between outputting the lower number and the higher
+number.

@@ -1,0 +1,13 @@
+You can find an introduction for Graph Theory here: 
+https://www.youtube.com/watch?v=09_LlHjoEiY
+
+This question requires you to detect specific cycles in a graph, but there is a way to do it without
+building a proper cycle detection algorithm in this case.
+
+Notice that the largest possible length of a given operation would have to go through every other
+cell one at a time, which means the longest path is 9 * 10 cells long.
+
+Because of this observation, we can loop through every cell 9 * 10 times each in order, and check if
+we can get the result of that cell in that point of time (This means that all of its references are
+integers or have already been solved). After 9 * 10 loops, if we still can't caluclate the answer
+to a specific cell, it is not possible because of the observation above, and we can mark it with a *.

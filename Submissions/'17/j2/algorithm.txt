@@ -1,0 +1,1 @@
+Use a variable to store the sum and a loop to increase the amount to be added 'k' times.

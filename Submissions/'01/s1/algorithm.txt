@@ -1,0 +1,14 @@
+You can use a nested list to store the cards or multiple lists, either is fine for this question.
+
+After that, you loop through each list and check two items:
+	- the elements inside the list
+	- the length of the list
+
+To check the elements inside the list, you can use a for loop to check throught the list, adding
+points if you see a "A", "K", "Q", or "J".
+
+After that, you can check the length of the list. If the length is less than 3, you add points as well.
+
+Then, you can output the points, add the points to a total, and repeat for the other lists.
+
+Finally, you can output the total amount of points.

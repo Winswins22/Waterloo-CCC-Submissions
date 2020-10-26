@@ -1,0 +1,7 @@
+Count the amount of each letter in each string. You can loop through all the letters and store
+the amounts with a dict/map.
+
+For 8/15 marks, simply compare if the maps/dicts are equal.
+For the rest of the marks, get the amount of different characters between the two 
+(excluding asterisks) and see if the amount of different characters is less or equal to the amount
+of asterisks.

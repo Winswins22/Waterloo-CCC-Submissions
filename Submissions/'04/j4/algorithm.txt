@@ -1,0 +1,10 @@
+For this question, it's helpful to use ASCII to save a bit of work.
+
+In ASCII, A = 65, B = 66, ... Z = 90. Full table here: http://www.asciitable.com/
+
+First, we need to read input and remove anything that is not a letter. If we convert the character
+to an ASCII number and it is outside 65 to 90 (inclusive), we remove it.
+
+After that, we can use a for loop with an extra counter to choose the next letter in the encrytion 
+key to use. In the for loop, we add both the letters from the key and the phrase, subtract 65, and
+if the number is higher than 90, we reduce it by 26 (to get back to "A", as it exceeded 90 ("Z")).

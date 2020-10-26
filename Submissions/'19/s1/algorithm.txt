@@ -1,0 +1,5 @@
+You can brute force this question without having to actually flip the numbers.
+Simply total the amount of "H"s and "V"s and find the remainder for each after dividing by 2
+(since the table remains the same after 2 horizontal/vertical flips). 
+
+After that, use if statements to determine the output.

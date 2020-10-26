@@ -1,0 +1,5 @@
+For this questions you can use a counter for each slot machine, a counter to store how much
+money Martha has left, and a counter to store how many times she has played.
+
+You can use a while loop to play each machine. After each play check if she has earned money, and 
+then check if she's broke.

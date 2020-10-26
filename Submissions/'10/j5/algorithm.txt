@@ -1,0 +1,9 @@
+This question uses a Breadth First Search, with the twist that you move in an "L" shape instead of
+adjacent tiles.
+
+You can find an introduction for Breadth First Search here: 
+https://www.youtube.com/watch?v=09_LlHjoEiY
+
+To get new positions, you can use 2 different arrays, one for vertical movement and the other for 
+horizontal movement. You can loop through both arrays, and add the values to the current row/col
+to get all new positions.

@@ -1,0 +1,5 @@
+To calculate primes quickly, implement the Sieve of Eratosthenes.
+https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+
+You do not have to reset the sieve for each test case, and it saves time since you dont have to
+check if the same number is a prime repeatedly across the test cases.

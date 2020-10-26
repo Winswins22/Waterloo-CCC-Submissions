@@ -1,0 +1,4 @@
+You can use a "nested" for loop - a loop inside a loop - to guess at all the possible combinations.
+You can store that amount of times in another variable to output later.
+
+Make sure you output "way" instead of "ways" when you have only 1 way to get 10 !

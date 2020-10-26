@@ -1,0 +1,2 @@
+You can use multiple if statements to check for aliens. Since you may need to output multiple aliens,
+it is better to use multiple ifs instead of "else if".

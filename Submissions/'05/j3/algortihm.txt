@@ -1,0 +1,8 @@
+While taking in instructions, record the OPPOSITE of what you get. For example:
+L
+SCHOOL
+Record "RIGHT" and "SCHOOL" instead of left, because you need to turn the opposite way when heading
+home.
+
+Additionally, you'll want to reverse the order of the instructions, since you need to start at the
+last street you used to get to school.

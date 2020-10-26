@@ -1,0 +1,2 @@
+Use a stack, list, or vector to simulate the input. If there is a "0", pop the last element. If
+there is not a "0", add it to the end.

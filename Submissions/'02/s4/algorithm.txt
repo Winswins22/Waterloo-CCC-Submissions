@@ -1,0 +1,52 @@
+This solution uses memoizataion. 
+Explanation: https://www.geeksforgeeks.org/memoization-1d-2d-and-3d/
+
+First, you want to get the names and the times and store them. You also want to create a variable to
+store the best times in a map/dict, with the key being the position, and the value being the best
+time.
+
+To find the best path, you start at index 0, and check every possibility of group sizes from your
+current index, and find the answer that gives you the least time.
+
+For example, if the limit of the group size is 2 and there are three people:
+
+Current Index: 0
+
+Names: [John, Alex, Cindy]
+Times: [2, 5, 3]
+Best Times: [?, ?, ?]
+
+You can group John and Alex up, or send only John out. Let's try sending only John out.
+
+Current Index: 1
+
+Names: [John, Alex, Cindy]
+Times: [2, 5, 3]
+Best Times: [?, ?, ?]
+
+You can group Alex and Cindy up, or send only Alex out. Let's try sending only Alex out.
+
+Current Index: 2
+
+Names: [John, Alex, Cindy]
+Times: [2, 5, 3]
+Best Times: [?, ?, ?]
+
+Since we can only send out Cindy, the best time is 3 for this position. Let's save and backtrack.
+
+Current Index: 1
+
+Names: [John, Alex, Cindy]
+Times: [2, 5, 3]
+Best Times: [?, ?, 3]
+
+Now that we've tried sending only Cindy out, let's see if sending them out together or sending them
+seperately is better. Together costs 5, while alone costs 5+3. Let's save and backtrack.
+
+Current Index: 0
+
+Names: [John, Alex, Cindy]
+Times: [2, 5, 3]
+Best Times: [?, 5, 3]
+
+Repeat this until you get the 0th index. (Answer is 7, [John] + [Alex and Cindy].)

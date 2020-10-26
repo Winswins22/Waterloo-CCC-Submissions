@@ -12,68 +12,6 @@ std::string toProcess;
 std::vector <char> toEncrypt;
 std::vector <char> encrypted;
 
-void outVect (std::vector<char> x, bool newLine = false){
-  //works also with empty sets
-  std::cerr << "vector(";
-
-  if (not x.empty()){
-    long long iters = 1;
-    long long setSize = x.size();
-
-    for (char i : x){
-      std::cerr << i;
-
-      if (iters == setSize){
-        std::cerr << ")";
-      }
-      else{
-        std::cerr << ", ";
-      }
-
-      iters ++;
-    }
-  }
-  else{
-    std::cerr << ")";
-  }
-
-  if (newLine){
-    std::cerr << '\n';
-  }
-
-}
-
-void outVect (std::vector<long long> x, bool newLine = false){
-  //works also with empty sets
-  std::cerr << "vector(";
-
-  if (not x.empty()){
-    long long iters = 1;
-    long long setSize = x.size();
-
-    for (long long i : x){
-      std::cerr << i;
-
-      if (iters == setSize){
-        std::cerr << ")";
-      }
-      else{
-        std::cerr << ", ";
-      }
-
-      iters ++;
-    }
-  }
-  else{
-    std::cerr << ")";
-  }
-
-  if (newLine){
-    std::cerr << '\n';
-  }
-
-}
-
 bool isAscii (ll converted){
     
     if (0 <= converted and converted <= 25){
@@ -96,7 +34,6 @@ int main(){
     
     std::getline(std::cin, keyword);
     std::getline(std::cin, toProcess);
-    //std::cout << "\nLine test: " << toProcess << '\n';
     
     //convert ascii to amoount of shift
     ll ascii_val;
@@ -128,10 +65,6 @@ int main(){
         if (new_num > 90){
             new_num -= 26;
         }
-        // verify.exe
-        if (not isAscii(new_num)){
-            //std::cout << "ERROR\n";
-        }
         
         new_letter = new_num;
         encrypted.pb(new_letter);
@@ -141,8 +74,4 @@ int main(){
         std::cout << i;
     }
     std::cout << '\n';
-    
-    //std::cout << toProcess << '\n';
-    //outVect (toEncrypt, true);
-    //outVect (shift, true);
 }

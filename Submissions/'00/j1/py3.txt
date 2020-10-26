@@ -1,37 +1,40 @@
-line = input ()
+line = input().split()
 
-startDay = int (line [0])
-currentDay = startDay
+start = int(line[0])
+days = int(line[1]) + 1
 
-numDays = int (line [2:len(line)])
+# use nested list to store the days that are going to be outputted
+# first index: row in calendar
+# second index: col
+nestedList = []
+
+firstList = []
+for i in range (start - 1):
+    firstList.append(' ')
+
+nestedList.append(firstList)
+
+
+currentDay = 1
+
+while days != currentDay:
+    
+    if len(nestedList[len(nestedList) - 1]) == 7:
+        nestedList.append([])
+    
+    nestedList[len(nestedList) - 1].append(currentDay)
+    
+    currentDay += 1
+
 
 print ("Sun Mon Tue Wed Thr Fri Sat")
-spacing = ("    " * (startDay - 1))
-print ("  " + spacing, end= "", sep= "")
-
-for i in range (1, numDays + 1):
-   
-    if currentDay == 7:
-        currentDay = 1
-         
-        if i < 9:
-           print (i, sep= "")
-           print ("  ", end= "", sep= "")
-        elif i == numDays:
-           print (i)
-           break
-        else:
-           print (i, sep= "")
-           print (" ", end= "", sep= "")
-           
     
-    else:
-        currentDay += 1
-                  
-        if i < 9:
-           print (i, "   ", end= "", sep= "")
-        elif i == numDays:
-           print (i)
-           break
-        else:
-           print (i, "  ", end= "", sep= "")
+for row in nestedList:
+    #extra space in first col
+    removeASpace = True
+   
+    for col in row:
+        spacing = 4 - len(str(col)) - removeASpace
+        print (" " * spacing, col, end= "", sep= "")
+        removeASpace = False
+    print ()

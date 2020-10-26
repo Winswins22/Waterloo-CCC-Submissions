@@ -1,0 +1,5 @@
+Organize the keypad on the phone so that each button is stored as a list inside a "nested" list.
+
+While reading input, keep in mind the previous key that was pressed. Add the base amount of time
+that it takes to enter the letter, and if both the current letter and the previoud letter are on
+the same line, add some extra time.

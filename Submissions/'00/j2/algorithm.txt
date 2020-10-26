@@ -1,0 +1,19 @@
+For this question, you'll want to use a for loop to loop through all the numbers, and use a counter
+to keep track of how many numbers can be reversed.
+
+Inside the for loop, you'll need to check one number at a time from 0 .. halfway, while also 
+checking the other side.
+
+For example, if we were checking the number 16891:
+
+1: Check if start and end are the same after reversal
+   - 1 and 1 are reversable, continue
+
+2: Check start + 1 and end - 1 are the same after reversal
+   - 6 and 9 are reversable
+
+3: Check start + 2 and end - 2 are the same after reversal
+   - 8 and 8 are reversable
+
+Since it passed through, it must be a reversable number. 
+If the number failed any of those checks, it cannot be reversed.

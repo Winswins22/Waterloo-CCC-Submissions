@@ -1,0 +1,2 @@
+You can use if statements to find every possiblity, or use a list and sort it, then print out the
+middle number.

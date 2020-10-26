@@ -1,0 +1,3 @@
+For this question, you'll want to use a "nested" loop - a loop inside a loop.
+
+Use one for loop to output the noun, and another to output the adjective.

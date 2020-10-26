@@ -1,0 +1,2 @@
+Check if all three of the conditions given in the problem statemet are met using if statements.
+If they are, output "ignore". Otherwise, output "answer".

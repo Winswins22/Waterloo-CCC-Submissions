@@ -1,0 +1,56 @@
+For this question, either memoization or tabulation is fine, though for memoization I had to add a
+little shortcut to improve execution time (even when I used c++). Since tabulation is a bit more
+straightforward, I chose to explain it.
+
+
+For tabulation, you can use a list/vector/indexed data structure to store how many clubs you need to
+use to get to a distance. The index represents the distance, while the item at the index represents
+the amount of clubs needed.
+
+After that, you'll want to initialize the data structure with invalid values, then mark the club
+values as 1 (since you can use that one club to get to that distance).
+
+Next, loop from 1 .. target_distance and check if you can subtract your current with your index with
+a club, and if you hit a index with a valid amount of clubs, you set your current index to the
+amount of clubs found + 1.
+
+After that, check if your target has a valid amount of clubs. If yes, its possible to reach it. If
+not, it's impossible to reach it.
+
+For example, if our target distance was 5 and we had the clubs 2 and 1, heres how to program would
+store the data:
+
+Initialize
+[1] = 1
+[2] = 1
+[3] = invalid
+[4] = invalid
+[5] = invalid
+
+Checked 1 and 2, checking 3.
+3 - 2 leads to a valid index of 1, new clubs is [1] + 1
+[1] = 1
+[2] = 1
+[3] = 2
+[4] = invalid
+[5] = invalid
+
+Checking 4.
+4 - 2 leads to a valid index of 2, new clubs is [2] + 1
+[1] = 1
+[2] = 1
+[3] = 2
+[4] = 2
+[5] = invalid
+
+Checking 5.
+5 - 2 leads to a valid index of 3, new clubs is [3] + 1
+[1] = 1
+[2] = 1
+[3] = 2
+[4] = 2
+[5] = 3
+
+Roberta wins in 3 strokes.
+
+
