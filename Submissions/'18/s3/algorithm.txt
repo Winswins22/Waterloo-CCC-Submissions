@@ -1,0 +1,60 @@
+You can find an introduction for Breadth First Search here: 
+https://www.youtube.com/watch?v=09_LlHjoEiY
+
+For the first 5 marks, you'll need to implement a BFS to search through all the dots and store the
+results of your search so that it can be outputted later on.
+
+For another 5 marks, you'll want to implement cameras. You can move in all 4 directions (up, down,
+left, right) and either keep track of the tiles the camera is watching or change all the tiles it
+can see into walls.
+
+For the final 5 marks, you'll need to take into account both cameras and conveyors. Cameras can't
+see the robot when they are on the conveyor, and can see past the conveyor. To find the end
+location for each conveyor, use a recursive function to travel along the conveyors. Keep note of
+the conveyors that have been previously visited and make sure you don't visit them again, as you 
+don't want to enter an infinite loop.
+
+Extra camera + conveyor test cases:
+
+Basic conveyors
+4 5
+WWWWW
+W...W
+WSR.W
+WWWWW
+
+Answer:
+1
+2
+2
+1
+
+Linked conveyors
+4 5
+WWWWW
+WWW.W
+WSRUW
+WWWWW
+
+Answer:
+1
+
+Cameras 1
+4 5
+WWWWW
+WWCWW
+WSR.W
+WWWWW
+
+Answer:
+1
+
+Cameras 2
+4 5
+WWWWW
+WWC.W
+WSRUW
+WWWWW
+
+Answer:
+-1
