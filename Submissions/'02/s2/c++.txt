@@ -1,35 +1,33 @@
-#include <bits/stdc++.h>
-
-using namespace std;
+#include <iostream>
+#include <cmath>
 
 int main() {
     
-    int ogNumer, ogDenom;
-    int whole, numer, denom;
-    int temp;
+    int originalNumerator, originalDenominator;
+    int whole, numerator, denominator;
     
-    cin >> ogNumer >> ogDenom;
+    std::cin >> originalNumerator >> originalDenominator;
     
-    numer = ogNumer % ogDenom;
-    denom = ogDenom;
+    numerator = originalNumerator % originalDenominator;
+    denominator = originalDenominator;
     
-    whole = (ogNumer - numer) / ogDenom;
+    whole = (originalNumerator - numerator) / originalDenominator;
     
-    for (int i = ogDenom; i != 0; i--){
+    for (int i = originalDenominator; i != 0; i--){
         
-        if (numer % i == 0 && denom % i == 0){
-            numer /= i;
-            denom /= i;
+        if (numerator % i == 0 && denominator % i == 0){
+            numerator /= i;
+            denominator /= i;
         }
         
     }
     
     if (whole != 0){
-        cout << whole << " ";
+        std::cout << whole << " ";
     }
     
-    if (numer != 0){
-        cout << numer << "/" << denom;
+    if (numerator != 0){
+        std::cout << numerator << "/" << denominator;
     }
     
     

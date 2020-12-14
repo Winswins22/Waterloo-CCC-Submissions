@@ -1,0 +1,24 @@
+#originalNumerator, originalDenominator = 0
+#whole, numerator, denominator = 0
+
+originalNumerator = int(input())
+originalDenominator = int(input())
+
+numerator = originalNumerator % originalDenominator;
+denominator = originalDenominator;
+
+whole = int((originalNumerator - numerator) / originalDenominator);
+
+for i in range(originalDenominator, 0, -1):
+    
+    if numerator % i == 0 and denominator % i == 0:
+        numerator /= i;
+        denominator /= i;
+
+
+if whole != 0:
+    print (whole, " ", end="", sep="")
+
+
+if numerator != 0:
+    print(int(numerator), "/", int(denominator), end="", sep="")
