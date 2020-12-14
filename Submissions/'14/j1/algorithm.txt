@@ -1,1 +1,2 @@
-Implement the if statements given in the problem description.
+Delcare variables to store the angles. Then, implement the conditions using if statements given 
+in the problem description.
