@@ -17,7 +17,115 @@
 #include <algorithm>
 #include <climits>
 
-void outSet (std::set<long long> x, bool newLine = false){
+void _template_ (std::set<long long> x, bool newLine = false){
+  //works also with empty sets
+  std::cerr << "m_set(";
+
+  if (not x.empty()){
+    long long iters = 1;
+    long long setSize = x.size();
+
+    for (auto i : x){
+      std::cerr << i;
+
+      if (iters == setSize){
+        std::cerr << ")";
+      }
+      else{
+        std::cerr << ", ";
+      }
+
+      iters ++;
+    }
+  }
+  else{
+    std::cerr << ")";
+  }
+
+  if (newLine){
+    std::cerr << '\n';
+  }
+
+}
+
+void print (std::pair <long long, long long> x, bool newLine = false){
+  //works only on full pairs
+  if (newLine){
+    std::cerr << "(" << x.first << ", " << x.second << ")\n";
+  }
+  else{
+    std::cerr << "(" << x.first << ", " << x.second << ")";
+  }
+}
+
+void print (std::array<long long, 3> x, bool newLine = false){
+  // parameter for x may need to be changed
+  std::cerr << "array(";
+
+  if (not x.empty()){
+    long long iters = 1;
+    long long arraySize = x.size();
+
+    for (auto i : x){
+      std::cerr << i;
+
+      if (iters == arraySize){
+        std::cerr << ")";
+      }
+      else{
+        std::cerr << ", ";
+      }
+
+      iters ++;
+    }
+  }
+  else{
+    std::cerr << ")";
+  }
+
+  if (newLine){
+    std::cerr << '\n';
+  }
+}
+
+
+
+
+
+
+// example of changing _template_
+void print (std::multiset<long long> x, bool newLine = false){
+  //works also with empty sets
+  std::cerr << "m_set(";
+
+  if (not x.empty()){
+    long long iters = 1;
+    long long setSize = x.size();
+
+    for (auto i : x){
+      std::cerr << i;
+
+      if (iters == setSize){
+        std::cerr << ")";
+      }
+      else{
+        std::cerr << ", ";
+      }
+
+      iters ++;
+    }
+  }
+  else{
+    std::cerr << ")";
+  }
+
+  if (newLine){
+    std::cerr << '\n';
+  }
+
+}
+
+void print (std::set<long long> x, bool newLine = false){
   //works also with empty sets
   std::cerr << "set(";
 
@@ -48,7 +156,7 @@ void outSet (std::set<long long> x, bool newLine = false){
 
 }
 
-void outSet (std::unordered_set<long long> x, bool newLine = false){
+void print (std::unordered_set<long long> x, bool newLine = false){
   //works also with empty sets
   std::cerr << "u_set(";
 
@@ -79,17 +187,7 @@ void outSet (std::unordered_set<long long> x, bool newLine = false){
 
 }
 
-void outPair (std::pair <long long, long long> x, bool newLine = false){
-  //works only on full pairs
-  if (newLine){
-    std::cerr << "(" << x.first << ", " << x.second << ")\n";
-  }
-  else{
-    std::cerr << "(" << x.first << ", " << x.second << ")";
-  }
-}
-
-void outVect (std::vector<long long> x, bool newLine = false){
+void print (std::vector<long long> x, bool newLine = false){
   //works also with empty vectors
   std::cerr << "vector(";
 
@@ -120,18 +218,21 @@ void outVect (std::vector<long long> x, bool newLine = false){
 
 }
 
-void outArr (std::array<long long, 3> x, bool newLine = false){
-  // parameter for x may need to be changed
-  std::cerr << "array(";
+// changing _template_ to deal with more complicated data types
+void print (std::set< std::pair<long long, long long> > x, bool newLine = false){
+  //works also with empty sets
+  std::cerr << "m_set(";
 
   if (not x.empty()){
     long long iters = 1;
-    long long arraySize = x.size();
+    long long setSize = x.size();
 
     for (auto i : x){
-      std::cerr << i;
+      // change here -----------
+      print(i);
+      // -----------------------
 
-      if (iters == arraySize){
+      if (iters == setSize){
         std::cerr << ")";
       }
       else{
@@ -148,9 +249,12 @@ void outArr (std::array<long long, 3> x, bool newLine = false){
   if (newLine){
     std::cerr << '\n';
   }
+
 }
+
+
 
 int main() {
   std::array <long long, 3> t {1, 2, 541};
-  outArr(t, true);
+  print(t, true);
 }
