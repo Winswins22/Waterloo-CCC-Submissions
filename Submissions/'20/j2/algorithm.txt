@@ -1,0 +1,46 @@
+The first tree inputs give you the amount of people that need to be infected, 
+the amount of people infected on day 0, and the amouont of people that one
+person can infect.
+
+The output will be the day on which the amount of people that needs to be infected
+is less than the amount of people that are currently infected.
+
+To keep track of all of this, you'll need to use a while/for loop to keep incrementing
+the current days, a variable to track the total amount of infections, and a variable
+to track the amount of people infected the last day.
+
+Example:
+
+20
+6
+2
+
+Day TotalInfections PeopleInfectedYesterday
+0   6               6
+1   18              12
+2   42              24
+
+Edge Cases:
+
+
+Sample Input 2:
+
+Output the amount of days when the total amount of people infected are greater
+than the amount of people that need to be infected, not when they are equal.
+
+10
+2
+1
+
+Output: 5
+
+
+Day 0 Target:
+
+When the amount of people that need to be infected has already occured on day 0.
+
+10
+999999
+1
+
+Output: 0
