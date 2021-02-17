@@ -1,0 +1,5 @@
+To calculate the shift using the formula 3P+K, you can use a for loop to track P 
+while looping through the string. 
+
+To simulate the shifts, you can use mod (% in python) to reduce the number so there
+is no IndexError, and then index a list containing the alphabet to get the letter.
