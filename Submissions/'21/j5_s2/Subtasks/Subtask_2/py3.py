@@ -16,6 +16,12 @@ for i in range (choices):
     rowOrCol, position = input().split()
     position = int(position)
 
+    # Note:
+    # We are subtracting 1 from position as a list counts up differently compared to a problem statement.
+    # Problem: 1, 2, 3, 4
+    # List: 0, 1, 2, 3
+    # So, we subtract 1 from position to convert their counting system over to the list's counting system
+
     if rowOrCol == "C":
         currentColor[position-1] = not currentColor[position-1]
 
